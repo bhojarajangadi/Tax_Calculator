@@ -38,3 +38,10 @@ if __name__ == "__main__":
     print("Annual Income: ₹", income)
     print("Tax Amount: ₹", total_tax)
     print("Net Income: ₹", remaining_income)
+def tax_percentage(income):
+    income = taxable_income(income)
+    if income == 0:
+        return 0
+    return (tax(income) / income) * 100
+percentage = tax_percentage(income)
+print("Effective Tax Percentage:", percentage, "%")
